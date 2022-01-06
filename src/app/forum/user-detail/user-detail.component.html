@@ -1,0 +1,38 @@
+<div>
+    <ul>
+        <li>Username: {{user.username}}</li>
+        <li>Email: {{user.email}}</li>
+        <li>Name: {{user.name}}</li>
+    </ul>
+</div>
+
+<a [routerLink]="['']">Natrag</a>
+
+<div id="commentSection" *ngFor="let comment of comments; let i = index">
+
+    <div class="comment" *ngIf="user.username == comment.username && comment.isItBeingEdited == false">
+    <div class="commentAuthor">
+        by {{comment.username}} at {{comment.timestamp}}:
+    </div>
+    <div class="commentContent">
+        {{comment.content}}
+    </div>
+    <button class="buttonsForDeleting" *ngIf="user.username == comment.username" (click)="onDelete(i)">Delete</button>
+    <button class="buttonsForEditing" *ngIf="user.username == comment.username" (click)="onEdit(i)">Edit</button>
+    </div>
+
+    <div class="comment" *ngIf="comment.isItBeingEdited != false">
+    <div class="commentAuthor">
+        by {{comment.username}}:
+    </div>
+    <div class="commentContent">
+        <textarea rows="4" cols="50" [(ngModel)]="editedContent">{{editedContent}}</textarea>
+    </div>
+    <button class="buttonsForDeleting" (click)="onDelete(i)">
+        Delete
+    </button>
+    <button class="buttonsForEditing" (click)="onDoneEditing(i)">Done editing</button>
+    </div>
+
+    <button class="buttonsForEditing" *ngIf="comment.isItBeingEdited != false" (click)="onCancel(i)">Cancel</button>
+</div>

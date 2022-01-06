@@ -1,0 +1,79 @@
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    padding: 0.25em 1em;
+    text-decoration: none; /* no underline */
+    background-color: #EBF5FF; /* pale bluish white */
+    color: #4312AE; /* dark blue */
+    border: 2px solid black;
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    padding: 0.25em 1em;
+    text-decoration: none; /* no underline */
+    background-color: #EBF5FF; /* pale bluish white */
+    color: #4312AE; /* dark blue */
+    border: 2px solid black;
+}
+
+
+input {
+    border: 1px solid rgb(195, 198, 201);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+textarea {
+    border: 1px solid rgb(195, 198, 201);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.comment {
+    background-color: rgb(230, 231, 231);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+}
+
+.commentAuthor {
+    margin: 20px;
+}
+
+.commentContent {
+    border: 1px solid rgb(195, 198, 201);
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+
+button {
+    background-color: #989f32;
+    border: none;
+    color: white;
+    margin: 5px 10px 10px 10px;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.buttonsForEditing {
+    background-color: #989f32;
+}
+
+.buttonsForDeleting {
+    background-color: #fa2605;
+}
+

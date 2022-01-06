@@ -1,0 +1,20 @@
+<form class="register-form" fxLayout="column" fxLayoutAlign="center center" (submit)="onRegister()" [formGroup]="registerForm">
+    <fieldset class="form-group">
+        <label>Username:</label>
+        <input type="text" formControlName="username" [(ngModel)]="username" placeholder="Enter username" required  minlength="4">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Password:</label>
+        <input type="password" formControlName="password" [(ngModel)]="password" placeholder="Enter password" required>
+    </fieldset>>
+    <fieldset class="form-group">
+        <label>Name:</label>
+        <input type="text" formControlName="name" [(ngModel)]="name" placeholder="Enter name" required>
+    </fieldset>>
+    <fieldset class="form-group">
+        <label>E-mail:</label>
+        <input type="text" formControlName="email"  [(ngModel)]="email" pattern="[^ @]*@[^ @]*" placeholder="Enter email" required>
+    </fieldset>>
+    <button type="submit" (click)="onRegister()" [routerLink]="['']" [disabled]="registerForm.invalid">Register</button>
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</form>

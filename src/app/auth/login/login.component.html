@@ -1,0 +1,11 @@
+<form class="signin-form" fxLayout="column" fxLayoutAlign="center center" (submit)="onLogin()" [formGroup]="signinForm">
+    <fieldset class="form-group">
+        <input type="text" formControlName="username" placeholder="Enter username">
+    </fieldset>
+    <fieldset class="form-group">
+        <input type="password" formControlName="password" placeholder="Enter password">
+    </fieldset>>
+    <button type="submit" [disabled]="signinForm.invalid">Login</button>
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</form>
+<button [routerLink]="['register']">Register</button>

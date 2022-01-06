@@ -1,0 +1,10 @@
+<nav>
+    <div>
+        <ul>
+            <li><a (click)="logout()" *ngIf="authenticated">Logout</a></li>
+            <li><a [routerLink]="['login']" *ngIf="!authenticated">Login</a></li>
+        </ul>
+    </div>
+    <div id="welcome_message" *ngIf="authenticated && user != null">Welcome <a [routerLink]="['profile']">{{user.name}}</a> ({{user.email}})</div>
+</nav>
+
